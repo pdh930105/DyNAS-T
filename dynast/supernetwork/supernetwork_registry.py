@@ -18,15 +18,15 @@ from dynast.supernetwork.image_classification.ofa.ofa_interface import (
     EvaluationInterfaceOFAMobileNetV3,
     EvaluationInterfaceOFAResNet50,
 )
-from dynast.supernetwork.machine_translation.transformer_encoding import TransformerLTEncoding
-from dynast.supernetwork.machine_translation.transformer_interface import EvaluationInterfaceTransformerLT
+#from dynast.supernetwork.machine_translation.transformer_encoding import TransformerLTEncoding
+#from dynast.supernetwork.machine_translation.transformer_interface import EvaluationInterfaceTransformerLT
 
 SUPERNET_ENCODING = {
     'ofa_resnet50': OFAResNet50Encoding,
     'ofa_mbv3_d234_e346_k357_w1.0': OFAMobileNetV3Encoding,
     'ofa_mbv3_d234_e346_k357_w1.2': OFAMobileNetV3Encoding,
     'ofa_proxyless_d234_e346_k357_w1.3': OFAMobileNetV3Encoding,
-    'transformer_lt_wmt_en_de': TransformerLTEncoding,
+#    'transformer_lt_wmt_en_de': TransformerLTEncoding,
 }
 
 SUPERNET_PARAMETERS = {
@@ -68,7 +68,7 @@ EVALUATION_INTERFACE = {
     'ofa_mbv3_d234_e346_k357_w1.0': EvaluationInterfaceOFAMobileNetV3,
     'ofa_mbv3_d234_e346_k357_w1.2': EvaluationInterfaceOFAMobileNetV3,
     'ofa_proxyless_d234_e346_k357_w1.3': EvaluationInterfaceOFAMobileNetV3,
-    'transformer_lt_wmt_en_de': EvaluationInterfaceTransformerLT,
+#    'transformer_lt_wmt_en_de': EvaluationInterfaceTransformerLT,
 }
 
 LINAS_INNERLOOP_EVALS = {

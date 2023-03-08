@@ -21,7 +21,7 @@ from dynast.search.evolutionary import (
     EvolutionarySingleObjective,
 )
 from dynast.supernetwork.image_classification.ofa.ofa_interface import OFARunner
-from dynast.supernetwork.machine_translation.transformer_interface import TransformerLTRunner
+#from dynast.supernetwork.machine_translation.transformer_interface import TransformerLTRunner
 from dynast.supernetwork.supernetwork_registry import *
 from dynast.utils import log
 
