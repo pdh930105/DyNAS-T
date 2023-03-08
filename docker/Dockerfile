@@ -11,18 +11,15 @@ RUN apt-get clean
 RUN apt-get update -y
 RUN apt-get install vim -y
 RUN apt-get install tmux -y
-RUN apt-get install libgl1-mesa-glx -y
-RUN apt-get install ffmpeg -y
-RUN apt-get install libx264-dev -y
 RUN apt-get install sudo -y
-RUN apt-get install x11-xserver-utils -y
-RUN apt-get install x11-apps -y
 
 RUN addgroup --gid $GROUP_ID $USER_NAME
 RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID $USER_NAME
 RUN echo ${USER_NAME}:${USER_NAME}|chpasswd
 RUN adduser pdh sudo
 RUN echo ${USER_NAME} 'ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+# python library install
 RUN pip install timm
 RUN pip install yacs
 RUN pip install pyhocon
